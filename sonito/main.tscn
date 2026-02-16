@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://catxxhafwf8y4"]
+
+[ext_resource type="Script" uid="uid://cef8gbftti5o8" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://d3nxx7wxn08jm" path="res://player.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cxx0vai4dx4p0" path="res://ground.tscn" id="4_7mycd"]
+[ext_resource type="PackedScene" uid="uid://b3fqmwjgyt1ur" path="res://drawers.tscn" id="4_lquwl"]
+
+[sub_resource type="Environment" id="Environment_1bvp3"]
+
+[node name="main" type="Node3D" unique_id=1587410753]
+script = ExtResource("1_h2yge")
+
+[node name="Drawers" parent="." unique_id=283654511 instance=ExtResource("4_lquwl")]
+transform = Transform3D(-0.36781615, 0, -0.9298986, 0, 1, 0, 0.9298986, 0, -0.36781615, 13.306229, -0.17928648, -12.729809)
+
+[node name="Player" parent="." unique_id=434556753 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 0.9752575, 0.22107193, 0, -0.22107193, 0.9752575, 7.7017746, 5.28685, -2.9883394)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1688293444]
+transform = Transform3D(0.98796695, 0.061193597, 0.14204478, -0.10792678, 0.9306029, 0.34975696, -0.11078435, -0.36087883, 0.9260094, 17.61125, 12.488308, 10.593961)
+shadow_enabled = true
+spot_range = 30.922
+spot_attenuation = -0.78
+spot_angle = 28.96
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=203962583]
+environment = SubResource("Environment_1bvp3")
+
+[node name="GROUND" parent="." unique_id=1424793799 instance=ExtResource("4_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.724788, 0, -8.96921)

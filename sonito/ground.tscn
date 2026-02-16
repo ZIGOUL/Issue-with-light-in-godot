@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cxx0vai4dx4p0"]
+
+[ext_resource type="PackedScene" uid="uid://c5l14soq3dypd" path="res://ressources/kitchen_ground/kitchen_ground.blend" id="1_yh8r4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t7tip"]
+size = Vector3(11.928162, 0.019805908, 11.8992)
+
+[node name="GROUND" type="Node3D" unique_id=1424793799]
+
+[node name="kitchen_ground" parent="." unique_id=532325629 instance=ExtResource("1_yh8r4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03306973, 0, -0.2457509)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="kitchen_ground" unique_id=594337713]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kitchen_ground/StaticBody3D" unique_id=1005297780]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024749637, -0.0034637451, -0.0149383545)
+shape = SubResource("BoxShape3D_t7tip")

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b3fqmwjgyt1ur"]
+
+[ext_resource type="PackedScene" uid="uid://dvqrvy0r81haa" path="res://ressources/industrial_drawers/industrial_drawers.blend" id="1_fgsmq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gacmi"]
+size = Vector3(3.503975, 10, 6.417755)
+
+[node name="Drawers" type="Node3D" unique_id=283654511]
+
+[node name="industrial_drawers" parent="." unique_id=2092397821 instance=ExtResource("1_fgsmq")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="industrial_drawers" unique_id=940019821]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="industrial_drawers/StaticBody3D" unique_id=560351033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0023053885, 5.2849865, 0.03131056)
+shape = SubResource("BoxShape3D_gacmi")
